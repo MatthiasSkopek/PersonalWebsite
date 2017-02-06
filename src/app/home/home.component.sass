@@ -1,0 +1,77 @@
+@import ../../styles
+#particles
+  padding: 0
+  margin: auto
+  top: 0
+  height: 100vh
+  width: 100vw
+  position: absolute
+  overflow: hidden
+  .Tagline
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 500px
+    transform: translate(-50%,-70%)
+    z-index: 100
+    h1
+      position: relative
+      text-align: center
+      color: white
+      text-align: center
+      font-size: 50px
+      font-family: $headerFont
+      font-weight: 400
+    h3
+      color: white
+      text-align: center
+      font-size: 23px
+      margin-top: -15px
+      font-family: $bodyFont
+      font-weight: 400
+    .project_button
+      text-align: center
+      background-color: $primary-color
+      color: white
+      width: 200px
+      float: left
+      cursor: pointer
+      font-family: $bodyFont
+      font-weight: 600
+      height: 50px
+      font-size: 20px
+      border: 2px solid $primary-color
+      transition: all 0.2s ease-in-out
+      &:hover
+        background-color: darken($primary-color,5%)
+        border: 2px solid darken($primary-color,5%)
+    .about_button
+      width: 200px
+      float: right
+      height: 50px
+      border: 2px solid $primary-color
+      display: inline-block
+      background-color: transparent
+      color: white
+      font-size: 20px
+      cursor: pointer
+      font-family: $bodyFont
+      font-weight: 600
+      transition: all 0.2s ease-in-out
+      &:hover
+        background-color: $primary-color
+@media (max-width: 680px)
+  #particles
+    .Tagline
+      width: 300px
+      transform: translate(-50%,-50%)
+      h1
+        font-size: 40px
+      h3
+        font-size: 17px
+      .about_button
+        margin-top: 20px
+        margin-right: 50px
+      .project_button
+        margin-left: 50px
+

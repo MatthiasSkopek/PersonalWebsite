@@ -1,0 +1,23 @@
+<div class="content">
+  <div class="background-img" [ngStyle]="{'background-color':item.color,'background-image':'url('+item.img+')'}">
+
+  </div>
+  <div class="small-background" [style.background-color]="item.color">
+  <img class="small-img" src="{{item.img}}"/>
+
+  </div>
+  <div class="side-bar" [style.background-color]="item.lightend" [routerLink]="[itemId]">
+    <h1>
+      {{item.name}}
+    </h1>
+    <hr />
+    <p>
+      {{item.desc}}
+    </p>
+    <button class="project_button">
+      Zum Projekt
+    </button>
+  </div>
+</div>
+
+

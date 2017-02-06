@@ -1,0 +1,119 @@
+@import ../../../styles
+@media (orientation: landscape)
+  .background-img
+    width: 100vw
+    height: 100vh
+    background-position: 50%,50%
+    background-size: 70% !important
+    background-repeat: no-repeat
+    background-attachment: fixed !important
+    position: static
+    transition: all 1s ease-in-out
+  .small-background
+    display: none
+    .small-img
+      display: none
+  .side-bar
+    width: 50vw
+    height: 100vh
+    float: right
+    alpha: 0.5
+    margin-top: -100vh
+    font-family: $headerFont
+    color: white
+    .project_button
+      color: white
+      border: 2px solid white
+      background-color: transparent
+      border-radius: 5px
+      flex-items: flex-center
+      @include font-size($p-font-sizes)
+      margin-left: calc(50% - 100px)
+      outline: none
+      padding-top: 5px
+      padding-bottom: 5px
+      padding-left: 25px
+      padding-right: 25px
+      transition: all 0.5s ease-in-out
+      &:hover
+        background-color: white
+        color: black
+      &:hover .background-img
+        background-position: 30%, 50%
+    h1
+      opacity: 1
+      margin-top: 30vh
+      margin-left: 10%
+      font-weight: 400
+      @include font-size($h1-font-sizes)
+    hr
+      width: 100px
+      margin-left: 10%
+      margin-top: -40px
+      height: 3px
+      border: none
+      background-color: white
+    p
+      margin-left: 13%
+      font-family: $bodyFont
+      padding-right: 10%
+      @include font-size($h3-font-sizes)
+@media (orientation: portrait),(max-width: 768px)
+  .content
+    width: 100vw
+    height: 100vh
+    position: relative
+    .background-img
+      display: none
+    .small-background
+      width: 100vw
+      height: 100vh
+    .small-img
+      width: 90vw
+      position: relative
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-100%)
+    .side-bar
+      width: 100vw
+      position: absolute
+      bottom: 0
+      padding-bottom: 20px
+      font-family: $headerFont
+      color: white
+      .project_button
+        color: white
+        border: 2px solid white
+        background-color: transparent
+        border-radius: 5px
+        flex-items: flex-center
+        @include font-size($p-font-sizes)
+        left: 50%
+        position: relative
+        transform: translate(-50%)
+        outline: none
+        padding-top: 5px
+        padding-bottom: 5px
+        padding-left: 25px
+        padding-right: 25px
+        transition: all 0.5s ease-in-out
+        &:hover
+          background-color: white
+          color: black
+      h1
+        padding-top: 10px
+        text-align: center
+        @include font-size($h1-font-sizes)
+        opacity: 1
+      hr
+        width: 100px
+        margin-left: calc(50% - 50px)
+        height: 3px
+        border: none
+        background-color: white
+      p
+        text-align: center
+        padding-right: 10%
+        padding-left: 10%
+        font-family: $bodyFont
+        @include font-size($h3-font-sizes)

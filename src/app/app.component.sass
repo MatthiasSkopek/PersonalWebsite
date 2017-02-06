@@ -1,0 +1,92 @@
+@import ../styles
+#absoluteContainer
+  width: 100vw
+  height: 100vh
+  #menu
+    width: 50vw
+    height: 100vh
+    margin-left: -50vw
+    position: absolute
+    .main_nav
+      margin-left: 10%
+      margin-top: 100px
+      list-style: none
+      li
+        text-align: left
+        color: #333333
+        padding-bottom: 70px
+        font-family: $headerFont
+        cursor: pointer
+        @include font-size($h1-font-sizes)
+    .social_nav
+      list-style: none
+      position: absolute
+      bottom: 50px
+      li
+        float: left
+        font-size: 20px
+  #menu_button
+    width: 64px
+    height: 64px
+    z-index: 10000
+    position: fixed
+    top: 15px
+    left: 10px
+    &:hover .two
+      width: 30px
+    &:hover .three
+      width: 30px
+    hr
+      width: 30px
+      border: none
+      outline: none
+      padding: 0
+      background-color: black
+      height: 2px
+      position: absolute
+    .one
+      width: 30px
+      top: 0px
+      margin-left: 10px
+    .two
+      width: 20px
+      margin-left: 10px
+      top: 10px
+      transition: all 0.2s ease-in-out
+    .three
+      width: 10px
+      margin-left: 10px
+      top: 20px
+      transition: all 0.2s ease-in-out
+  #container
+    width: 100vw
+    height: 100vh
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+@media (max-width: 680px)
+  #absoluteContainer
+    width: 100vw
+    height: 100vh
+    #menu
+      width: 50vw
+      height: 100vh
+      margin-left: -50vw
+      position: absolute
+      text-align: center
+      .main_nav
+        margin-left: -10%
+        margin-top: 100px
+        list-style: none
+        li
+          text-align: left
+          color: #333333
+          padding-bottom: 30px
+          font-size: 34px
+      .social_nav
+        list-style: none
+        position: absolute
+        bottom: 50px
+        li
+          float: left
+          font-size: 20px
+
+

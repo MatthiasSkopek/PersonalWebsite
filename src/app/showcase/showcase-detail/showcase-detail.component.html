@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="hero" [style.background-color]="selectedItem.color">
+
+  <h1>{{selectedItem.name}}</h1>
+    <h3 class="nextItem" (click)="nextItem()">
+      >
+    </h3>
+  </div>
+  <div class="fancyArrow" [style.background-color]="selectedItem.color">
+  </div>
+  <div class="flex-container ">
+    <div class="flex-item text">
+      <h1>{{selectedItem.name}}</h1>
+      <h3>{{selectedItem.desc}}</h3>
+      {{selectedItem.bodyText}} <br/><br/>
+      <button class="demo_button" md-raised-button (click)="goToSite()" [style.background-color]="selectedItem.color">
+        Live Demo
+      </button>
+      <br/>
+      <br/>
+      <br/>
+      <h3>
+        Verwendete Technologien:
+      </h3>
+      <ul class="skill-list">
+        <li *ngFor="let thing of selectedItem.things">
+          {{thing}}
+        </li>
+      </ul>
+    </div>
+    <div class="flex-item">
+      <div class="screens">
+        <img class="Tablet" *ngIf="selectedItem.imgTablet" src="{{selectedItem.imgTablet}}">
+        <img class="Desktop" src="{{selectedItem.imgDesktop}}">
+
+        <img class="Mobile" src="{{selectedItem.imgMobile}}">
+      </div>
+    </div>
+  </div>
+</div>
+

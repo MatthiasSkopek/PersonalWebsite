@@ -1,0 +1,21 @@
+<div id="absoluteContainer" [@damnAnimation2]="state">
+  <div id="menu" [@damnAnimationMenu]="state">
+    <ul class="main_nav">
+      <li [routerLink]="['']" (click)="toggleState()">Home</li>
+      <li [routerLink]="['project']" (click)="toggleState()">Projekte</li>
+      <li [routerLink]="['about']" (click)="toggleState()">Über Mich</li>
+    </ul>
+    <ul class="social_nav">
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+<div id="menu_button" (click)="toggleState()">
+  <hr class="one" [@LineOne]="state"/>
+  <hr class="two" [@LineTwo]="state"/>
+  <hr class="three" [@LineThree]="state"/>
+</div>
+<div id="container" [@damnAnimation]="state" (click)="toggleStateContainer()">
+  <router-outlet></router-outlet>
+</div>
+</div>

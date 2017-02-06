@@ -1,0 +1,83 @@
+@import ../../styles
+.about-container
+  padding-top: 50px
+  width: 100vw
+  background-color: white
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  align-items: flex-start
+  .child
+    margin: auto
+    top: 0
+    width: 30%
+  .text
+    flex-grow: 3
+    text-align: center
+    padding-left: 10%
+    padding-right: 10%
+    text-align: justify
+    h1
+      margin-top: 10%
+      font-family: $headerFont
+      color: $primary-color
+    article
+      text-align: justify
+      max-width: 800px
+      font-family: $bodyFont
+      @include font-size($p-font-sizes)
+  img
+    flex-grow: 3
+    padding-right: 10%
+    margin-top: 0
+    max-width: 200px
+    width: 20vw
+    height: auto
+.site_container
+  display: flex
+  text-align: center
+  background-color: white
+  margin-top: 50px
+  font-family: $bodyFont
+  .site_child
+    width: 90vw
+    margin-left: 5vw
+    margin-right: 5vw
+    text-align: center
+    p
+      @include font-size($p-font-sizes)
+    h2
+      font-family: $headerFont
+      color: $primary-color
+@media (max-width: 760px)
+  .about-container
+    width: 100vw
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    .child
+      margin: auto
+    .text
+      flex-grow: 12
+      order: 2
+      padding-left: 5vw
+      padding-right: 5vw
+      width: 90vw
+      text-align: center
+      h1
+        margin-top: 10%
+        font-family: $headerFont
+        color: $primary-color
+      article
+        text-align: justify
+        margin-left: 1%
+        font-family: $bodyFont
+    img
+      flex: 12
+      order: 1
+      margin-top: 0
+      width: 70vw
+      height: auto
+      padding-left: 15vw
+      padding-right: 15vw
+      max-width: 760px

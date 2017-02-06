@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Abril+Fatface')
+
+$headerFont: Abril Fatface
+$bodyFont: Josefin Sans
+$primary-color-dark:   #F57C00
+$primary-color:        #FF9800
+$primary-color-light:  #FFE0B2
+$primary-color-text:   #333333
+$accent-color:         #448AFF
+$primary-text-color:   #212121
+$secondary-text-color: #757575
+$divider-color:        #BDBDBD
+$p-font-sizes: (null  : 18px,480px : 16px,640px : 17px,1024px: 19px)
+$h1-font-sizes: (null  : 35px,480px : 40px,640px : 50px,1024px: 60px)
+$h3-font-sizes: (null  : 22px,480px : 25px,640px : 20px,1024px: 27px)
+@mixin font-size($fs-map)
+  @each $fs-breakpoint, $fs-font-size in $fs-map
+    @if $fs-breakpoint == null
+      font-size: $fs-font-size
+    @else
+      @media screen and (min-width: $fs-breakpoint)
+        font-size: $fs-font-size
+body
+  padding: 0
+  margin: 0
+  width: 100%
+  overflow-x: hidden
